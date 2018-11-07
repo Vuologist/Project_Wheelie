@@ -11,7 +11,9 @@
   "dependencies": {
     "@expo/vector-icons": "6.2.0",
     "color": "3.0.0",
+    "create-react-app": "^2.1.1",
     "expo": "^30.0.1",
+    "expo-cli": "^2.2.6",
     "moment": "2.18.1",
     "prop-types": "^15.6.2",
     "react": "16.3.1",
