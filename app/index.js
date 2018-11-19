@@ -1,12 +1,12 @@
-import React from 'react';
-import EStyleSheet from 'react-native-extended-stylesheet';
+import React from "react";
+import EStyleSheet from "react-native-extended-stylesheet";
 
-import Home from './screens/Home';
+import Home from "./screens/Home";
 
 EStyleSheet.build({
-    $primaryBlue: '#ff77bf',
+  $primaryBlue: "#B6D397",
 
-    $outline: 0,
+  $outline: 0
 });
 
 export default () => <Home />;
