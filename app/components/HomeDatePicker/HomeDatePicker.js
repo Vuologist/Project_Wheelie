@@ -10,7 +10,7 @@ class HomeDatePicker extends Component {
   }
 
   renderDates() {
-    let days = ["Sun", "Monday", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     let dayComponent = [];
 
     for (var i = 0; i < days.length; i++) {

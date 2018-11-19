@@ -1,4 +1,4 @@
-import HomeContainer from './Home/Container';
-import styles from './Home/styles';
+import HomeContainer from "./HomeContainer/HomeContainer";
+import styles from "./HomeContainer/styles";
 
 export { HomeContainer, styles };

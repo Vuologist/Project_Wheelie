@@ -19,7 +19,6 @@ class Home extends Component {
         <StatusBar backgroundColor="blue" barStyle="light-content" />
         <Header onPress={this.handleOptionPress} />
         <WelcomeBanner name={Name} />
-        <HomeDatePicker />
       </HomeContainer>
     );
   }
