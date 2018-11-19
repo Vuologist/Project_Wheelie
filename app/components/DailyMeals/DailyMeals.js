@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { View, Text, FlatList } from "react-native";
 
-import "./styles";
+import styles from "./styles";
+import Separator from "./Separator";
 
 class DailyMeals extends Component {
   constructor(props) {
@@ -14,7 +15,6 @@ class DailyMeals extends Component {
 
   componentDidMount() {
     var data = require("../../data/DailyMeals.json");
-    console.log(data.monday[0]);
     this.setState({
       dataSource: data.monday
     });
@@ -22,7 +22,8 @@ class DailyMeals extends Component {
 
   renderItems = ({ item }) => {
     return (
-      <View>
+      <View style={styles.itemContainer}>
+        <Text>{item.meal}</Text>
         <Text>{item.name}</Text>
       </View>
     );
@@ -30,8 +31,12 @@ class DailyMeals extends Component {
 
   render() {
     return (
-      <View>
-        <FlatList data={this.state.dataSource} renderItem={this.renderItems} />
+      <View style={styles.container}>
+        <FlatList
+          data={this.state.dataSource}
+          renderItem={this.renderItems}
+          ItemSeparatorComponent={Separator}
+        />
       </View>
     );
   }

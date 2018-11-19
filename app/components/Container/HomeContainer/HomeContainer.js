@@ -9,7 +9,7 @@ const HomeContainer = ({ children }) => (
     <View style={styles.statusBar}>{children[0]}</View>
     <View style={styles.header}>{children[1]}</View>
     <View style={styles.welcomeBanner}>{children[2]}</View>
-    <View>{children[3]}</View>
+    <View style={styles.dailyMeals}>{children[3]}</View>
   </View>
 );
 
