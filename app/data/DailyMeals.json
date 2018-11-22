@@ -1,0 +1,16 @@
+{
+  "monday": [
+    {
+      "meal": "breakfast",
+      "name": "bacon"
+    },
+    {
+      "meal": "lunch",
+      "name": "chicken"
+    },
+    {
+      "meal": "dinner",
+      "name": "porkchops"
+    }
+  ]
+}
