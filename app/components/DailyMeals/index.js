@@ -1,3 +1,3 @@
-import DailyMeals from "./DailyMeals";
+import DailyMeals from "./DailyMeals/DailyMeals";
 
 export { DailyMeals };

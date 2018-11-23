@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { View, Text, FlatList } from "react-native";
 
 import styles from "./styles";
-import Separator from "./Separator";
+import Separator from "../Separator/Separator";
 
 class DailyMeals extends Component {
   constructor(props) {
