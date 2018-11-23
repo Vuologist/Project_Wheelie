@@ -14,7 +14,7 @@ class DailyMeals extends Component {
   }
 
   componentDidMount() {
-    var data = require("../../data/DailyMeals.json");
+    var data = require("../../../data/DailyMeals.json");
     this.setState({
       dataSource: data.monday
     });
