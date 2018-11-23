@@ -22,7 +22,7 @@ class DailyMeals extends Component {
 
   renderItems = ({ item }) => {
     return (
-      <View style={styles.itemContainer}>
+      <View style={styles.itemContainer} key={'a'}>
         <Text>{item.meal}</Text>
         <Text>{item.name}</Text>
       </View>
