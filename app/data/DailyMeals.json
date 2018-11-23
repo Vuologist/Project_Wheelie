@@ -12,5 +12,19 @@
       "meal": "dinner",
       "name": "porkchops"
     }
+  ],
+  "tuesday": [
+    {
+      "meal": "breakfast",
+      "name": "bacon"
+    },
+    {
+      "meal": "lunch",
+      "name": "chicken"
+    },
+    {
+      "meal": "dinner",
+      "name": "porkchops"
+    }
   ]
 }
