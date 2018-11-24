@@ -8,37 +8,24 @@ import Separator from "../Separator/Separator";
 class DailyMeals extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      dataSource: []
-    };
   }
-
-  componentDidMount() {
-    var data = require("../../../data/DailyMeals.json");
-    this.setState({
-      dataSource: data.monday
-    });
-  }
-
-  renderItems = ({ item }) => {
-    return (
-      <View style={styles.itemContainer} key={'a'}>
-        <Text>{item.meal}</Text>
-        <Text>{item.name}</Text>
-      </View>
-    );
-  };
 
   render() {
-    return (
-      <View style={styles.container}>
-        <FlatList
-          data={this.state.dataSource}
-          renderItem={this.renderItems}
-          ItemSeparatorComponent={Separator}
-        />
-      </View>
-    );
+    var data = require("../../../data/DailyMeals.json");
+    var element = [];
+
+    var dataForDay = data.monday;
+
+    for (let i = 0; i < dataForDay.length; i++) {
+      element.push(
+        <View style={styles.itemContainer} key={i}>
+          <Text>{dataForDay[i].meal}</Text>
+          <Text style={styles.center}>{dataForDay[i].name}</Text>
+        </View>
+      );
+    }
+
+    return <View style={styles.container}>{element}</View>;
   }
 }
 

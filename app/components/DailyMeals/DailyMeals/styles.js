@@ -8,7 +8,13 @@ const styles = EStyleSheet.create({
     borderTopWidth: 3
   },
   itemContainer: {
-    paddingLeft: 15
+    paddingLeft: 15,
+    paddingRight: 15,
+    flexGrow: 1
+    //backgroundColor: "#888"
+  },
+  center: {
+    textAlign: "center"
   }
 });
 
