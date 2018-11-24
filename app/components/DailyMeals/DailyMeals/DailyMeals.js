@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { View, Text, FlatList } from "react-native";
+import { View, Text } from "react-native";
 
 import styles from "./styles";
-import Separator from "../Separator/Separator";
 
 class DailyMeals extends Component {
   constructor(props) {
@@ -20,7 +19,9 @@ class DailyMeals extends Component {
       element.push(
         <View style={styles.itemContainer} key={i}>
           <Text>{dataForDay[i].meal}</Text>
-          <Text style={styles.center}>{dataForDay[i].name}</Text>
+          <View style={styles.center}>
+            <Text>{dataForDay[i].name}</Text>
+          </View>
         </View>
       );
     }

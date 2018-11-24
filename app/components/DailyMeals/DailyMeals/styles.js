@@ -10,11 +10,12 @@ const styles = EStyleSheet.create({
   itemContainer: {
     paddingLeft: 15,
     paddingRight: 15,
-    flexGrow: 1
-    //backgroundColor: "#888"
+    flex: 1
   },
   center: {
-    textAlign: "center"
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center"
   }
 });
 
