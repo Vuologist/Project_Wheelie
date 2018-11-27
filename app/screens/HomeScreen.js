@@ -9,7 +9,7 @@ import { DailyMeals } from "../components/DailyMeals";
 
 const Name = "ANTHONY";
 
-class Home extends Component {
+class HomeScreen extends Component {
   handleOptionPress = () => {
     console.log("Header pressed!!");
   };
@@ -26,4 +26,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default HomeScreen;

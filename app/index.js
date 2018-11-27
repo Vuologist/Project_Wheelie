@@ -1,7 +1,13 @@
 import React from "react";
 import EStyleSheet from "react-native-extended-stylesheet";
+import {
+  createDrawerNavigator,
+  createStackNavigator,
+  createAppContainer
+} from "react-navigation";
 
-import Home from "./screens/Home";
+import HomeScreen from "./screens/HomeScreen";
+import SettingsScreen from "./screens/SettingsScreen";
 
 EStyleSheet.build({
   $primaryBlue: "#B6D397",
@@ -9,4 +15,18 @@ EStyleSheet.build({
   $outline: 0
 });
 
-export default () => <Home />;
+const HomeNavigation = createStackNavigator(
+  {
+    Home: HomeScreen
+  },
+  {
+    initialRouteName: HomeScreen
+  }
+);
+
+const DrawerNavigation = createDrawerNavigator({
+  Home: HomeScreen,
+  Setting: SettingsScreen
+});
+
+export default createAppContainer(DrawerNavigation);
