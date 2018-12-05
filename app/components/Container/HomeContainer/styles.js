@@ -10,7 +10,8 @@ export default EStyleSheet.create({
   welcomeBanner: {
     flexBasis: "40%",
     alignItems: "flex-start",
-    justifyContent: "flex-end"
+    justifyContent: "flex-end",
+    paddingBottom: 10
   },
   dailyMeals: {
     flexBasis: "60%"
