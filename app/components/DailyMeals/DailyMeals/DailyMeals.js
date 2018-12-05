@@ -12,6 +12,11 @@ class DailyMeals extends Component {
   render() {
     var data = require("../../../data/DailyMeals.json");
     var element = [];
+    var image = [
+      "./images/egg.png",
+      "./images/turkey-leg.png",
+      "./images/whole-turkey.png"
+    ];
 
     var dataForDay = data.monday;
 
@@ -27,7 +32,7 @@ class DailyMeals extends Component {
         </View>
       );
     }
-
+    //egg, single chicken leg, whole chicken
     return <View style={styles.container}>{element}</View>;
   }
 }
