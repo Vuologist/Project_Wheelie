@@ -19,7 +19,10 @@ class HomeScreen extends Component {
   render() {
     return (
       <HomeContainer>
-        <StatusBar backgroundColor="#E6E6E6" barStyle="dark-content" />
+        <StatusBar
+          backgroundColor={EStyleSheet.value("$primaryStatusBar")}
+          barStyle="dark-content"
+        />
         <Header onPress={this.handleOptionPress} />
         <WelcomeBanner name={Name} />
         <DailyMeals />
