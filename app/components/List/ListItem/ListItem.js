@@ -1,11 +1,13 @@
 import React from "react";
 import { View, Text, TouchableHighlight } from "react-native";
 
+import styles from "./styles";
+
 const ListItem = ({ text, onPress }) => {
   return (
     <TouchableHighlight onPress={onPress}>
-      <View>
-        <Text>{text}</Text>
+      <View style={styles.row}>
+        <Text style={styles.text}>{text}</Text>
       </View>
     </TouchableHighlight>
   );
