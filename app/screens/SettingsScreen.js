@@ -9,6 +9,10 @@ class SettingsScreen extends Component {
     super(props);
   }
 
+  static navigationOptions = {
+    hedaderTitle: "Settings"
+  };
+
   handlePressAccountInfo = () => {
     console.log("pressed account info");
   };
