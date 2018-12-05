@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, Image } from "react-native";
 
 import styles from "./styles";
 
@@ -13,9 +13,9 @@ class DailyMeals extends Component {
     var data = require("../../../data/DailyMeals.json");
     var element = [];
     var image = [
-      "./images/egg.png",
-      "./images/turkey-leg.png",
-      "./images/whole-turkey.png"
+      require("./images/egg.png"),
+      require("./images/turkey-leg.png"),
+      require("./images/whole-turkey.png")
     ];
 
     var dataForDay = data.monday;
@@ -25,8 +25,13 @@ class DailyMeals extends Component {
         <View style={styles.itemContainer} key={i}>
           <View style={styles.itemBox}>
             <Text>{dataForDay[i].meal}</Text>
-            <View style={styles.center}>
-              <Text>{dataForDay[i].name}</Text>
+            <View style={styles.content}>
+              <Image
+                resizeMode="contain"
+                style={styles.icon}
+                source={image[i]}
+              />
+              <Text style={styles.name}>{dataForDay[i].name}</Text>
             </View>
           </View>
         </View>

@@ -18,10 +18,20 @@ const styles = EStyleSheet.create({
     borderColor: "#75FF00",
     borderRadius: 4
   },
-  center: {
+  content: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center"
+    justifyContent: "flex-start",
+    flexDirection: "row"
+  },
+  icon: {
+    width: 40,
+    height: 40,
+    marginRight: 30,
+    alignSelf: "center"
+  },
+  name: {
+    fontSize: 20,
+    alignSelf: "center"
   }
 });
 
