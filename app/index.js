@@ -8,6 +8,7 @@ import {
 
 import HomeScreen from "./screens/HomeScreen";
 import SettingsScreen from "./screens/SettingsScreen";
+import AccountScreen from "./screens/AccountScreen";
 
 EStyleSheet.build({
   $primaryStatusBar: "#E6E6E6",
@@ -32,10 +33,16 @@ const SettingsNavigation = createStackNavigator(
       navigationOptions: () => ({
         title: "Settings"
       })
+    },
+    Account: {
+      screen: AccountScreen,
+      navigationOptions: () => ({
+        title: "Account Info"
+      })
     }
   },
   {
-    initialRouteName: "Settings"
+    initialRouteName: "Account"
   }
 );
 
