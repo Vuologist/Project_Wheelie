@@ -2,15 +2,21 @@ import EStyleSheet from "react-native-extended-stylesheet";
 
 const styles = EStyleSheet.create({
   container: {
-    backgroundColor: "#FFF",
-    flex: 1,
-    borderTopColor: "#000",
-    borderTopWidth: 3
+    flex: 1
   },
   itemContainer: {
-    paddingLeft: 15,
-    paddingRight: 15,
-    flex: 1
+    flex: 1,
+    paddingBottom: 10,
+    paddingRight: 10,
+    paddingLeft: 10
+  },
+  itemBox: {
+    flex: 1,
+    padding: 10,
+    backgroundColor: "#75FF00",
+    borderWidth: 1,
+    borderColor: "#75FF00",
+    borderRadius: 4
   },
   center: {
     flex: 1,

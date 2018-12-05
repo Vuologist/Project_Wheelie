@@ -12,27 +12,17 @@ class DailyMeals extends Component {
   render() {
     var data = require("../../../data/DailyMeals.json");
     var element = [];
-    const styleSpecific = StyleSheet.create({
-      one: {
-        backgroundColor: "#7600FC"
-      },
-      two: {
-        backgroundColor: "#009EAF"
-      },
-      three: {
-        backgroundColor: "#00885B"
-      }
-    });
 
-    var colors = [styleSpecific.one, styleSpecific.two, styleSpecific.three];
     var dataForDay = data.monday;
 
     for (let i = 0; i < dataForDay.length; i++) {
       element.push(
-        <View style={[styles.itemContainer, colors[i]]} key={i}>
-          <Text>{dataForDay[i].meal}</Text>
-          <View style={styles.center}>
-            <Text>{dataForDay[i].name}</Text>
+        <View style={styles.itemContainer} key={i}>
+          <View style={styles.itemBox}>
+            <Text>{dataForDay[i].meal}</Text>
+            <View style={styles.center}>
+              <Text>{dataForDay[i].name}</Text>
+            </View>
           </View>
         </View>
       );
