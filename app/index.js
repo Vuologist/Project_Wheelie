@@ -27,7 +27,12 @@ const HomeNavigation = createStackNavigator(
 
 const SettingsNavigation = createStackNavigator(
   {
-    Settings: SettingsScreen
+    Settings: {
+      screen: SettingsScreen,
+      navigationOptions: () => ({
+        title: "Settings"
+      })
+    }
   },
   {
     initialRouteName: "Settings"
