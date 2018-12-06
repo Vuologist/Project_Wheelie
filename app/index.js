@@ -12,7 +12,7 @@ import AccountScreen from "./screens/AccountScreen";
 
 EStyleSheet.build({
   $primaryStatusBar: "#E6E6E6",
-  $primaryBlue: "#F9F9F9",
+  $primaryBackground: "#F9F9F9",
 
   $outline: 0
 });
