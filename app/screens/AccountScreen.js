@@ -3,6 +3,7 @@ import { StatusBar, View, Text } from "react-native";
 import EStyleSheet from "react-native-extended-stylesheet";
 
 import { CenterContainer } from "../components/Container";
+import { MainAvatar } from "../components/Avatar";
 
 class AccountScreen extends Component {
   constructor(props) {
@@ -16,7 +17,7 @@ class AccountScreen extends Component {
           backgroundColor={EStyleSheet.value("$primaryStatusBar")}
           barStyle="dark-content"
         />
-        <Text>Hello</Text>
+        <MainAvatar />
       </CenterContainer>
     );
   }

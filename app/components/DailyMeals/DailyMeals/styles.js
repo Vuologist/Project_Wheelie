@@ -13,9 +13,9 @@ const styles = EStyleSheet.create({
   itemBox: {
     flex: 1,
     padding: 10,
-    backgroundColor: "#75FF00",
+    backgroundColor: "$primaryCard",
     borderWidth: 1,
-    borderColor: "#75FF00",
+    borderColor: "$primaryCard",
     borderRadius: 4
   },
   content: {
