@@ -6,7 +6,9 @@ import EStyleSheet from "react-native-extended-stylesheet";
 import { ListItem, Separator } from "../components/List";
 import {
   AccountCardContainer,
-  BackgroundContainer
+  BackgroundContainer,
+  GeneralCardContainer,
+  Title
 } from "../components/Container";
 import { MainAvatar } from "../components/Avatar";
 import { SingleLineText } from "../components/Text";
@@ -54,12 +56,9 @@ class SettingsScreen extends Component {
               <PrimaryBtn text="Edit" />
             </View>
           </AccountCardContainer>
-
-          <ListItem
-            text="Notifications"
-            onPress={this.handlePressNotifications}
-          />
-          <Separator />
+          <GeneralCardContainer>
+            <Title title="Notifications" />
+          </GeneralCardContainer>
           <ListItem text="Sync" onPress={this.handlePressSync} />
           <Separator />
           <ListItem text="About" onPress={this.handlePressAbout} />
