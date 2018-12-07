@@ -1,9 +1,13 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { ScrollView, StatusBar } from "react-native";
+import { View, ScrollView, StatusBar } from "react-native";
 import EStyleSheet from "react-native-extended-stylesheet";
 
 import { ListItem, Separator } from "../components/List";
+import { AccountCardContainer } from "../components/Container";
+import { MainAvatar } from "../components/Avatar";
+import { SingleLineText } from "../components/Text";
+import { PrimaryBtn } from "../components/Button";
 
 class SettingsScreen extends Component {
   constructor(props) {
@@ -37,6 +41,14 @@ class SettingsScreen extends Component {
           backgroundColor={EStyleSheet.value("$primaryStatusBar")}
           barStyle="dark-content"
         />
+        <AccountCardContainer>
+          <MainAvatar />
+          <View>
+            <SingleLineText title="Name" content="Anthony Vu" />
+            <SingleLineText title="Email" content="abvu@cpp.edu" />
+            <PrimaryBtn text="Edit" />
+          </View>
+        </AccountCardContainer>
         <ListItem text="Account Info" onPress={this.handlePressAccountInfo} />
         <Separator />
         <ListItem
