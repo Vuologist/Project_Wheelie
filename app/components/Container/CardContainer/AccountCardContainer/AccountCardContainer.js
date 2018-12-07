@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text } from "react-native";
 
-import { CenterContainer } from "../index";
+import { CenterContainer } from "../../index";
 
 import styles from "./styles";
 
