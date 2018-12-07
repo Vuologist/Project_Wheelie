@@ -1,17 +1,22 @@
 import React from "react";
-import { View } from "react-native";
+import { View, Text } from "react-native";
 
 import { CenterContainer } from "../index";
 
 import styles from "./styles";
 
 const AccountCardContainer = ({ children }) => (
-  <View style={styles.container}>
-    <View style={styles.left}>{children[0]}</View>
-    <View style={styles.right}>
-      <CenterContainer>{children[1]}</CenterContainer>
+  <React.Fragment>
+    <View>{children[0]}</View>
+    <View style={styles.container}>
+      <View style={styles.left}>
+        <View>{children[1]}</View>
+      </View>
+      <View style={styles.right}>
+        <CenterContainer>{children[2]}</CenterContainer>
+      </View>
     </View>
-  </View>
+  </React.Fragment>
 );
 
 export default AccountCardContainer;

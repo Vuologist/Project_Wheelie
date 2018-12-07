@@ -5,8 +5,6 @@ export default EStyleSheet.create({
     flex: 1,
     backgroundColor: "$primaryBackground"
   },
-  statusBar: {},
-  header: {},
   welcomeBanner: {
     flexBasis: "40%",
     alignItems: "flex-start",

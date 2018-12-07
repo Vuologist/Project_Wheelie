@@ -6,7 +6,8 @@ var { height, width } = Dimensions.get("window");
 export default EStyleSheet.create({
   container: {
     flexDirection: "row",
-    flex: 1
+    flex: 1,
+    margin: 10
   },
   left: {
     flexBasis: "30%",

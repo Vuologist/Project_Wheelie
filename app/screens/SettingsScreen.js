@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { View, ScrollView, StatusBar } from "react-native";
+import { Text, View, ScrollView, StatusBar } from "react-native";
 import EStyleSheet from "react-native-extended-stylesheet";
 
 import { ListItem, Separator } from "../components/List";
-import { AccountCardContainer } from "../components/Container";
+import {
+  AccountCardContainer,
+  BackgroundContainer
+} from "../components/Container";
 import { MainAvatar } from "../components/Avatar";
 import { SingleLineText } from "../components/Text";
 import { PrimaryBtn } from "../components/Button";
@@ -37,29 +40,31 @@ class SettingsScreen extends Component {
   render() {
     return (
       <ScrollView>
-        <StatusBar
-          backgroundColor={EStyleSheet.value("$primaryStatusBar")}
-          barStyle="dark-content"
-        />
-        <AccountCardContainer>
-          <MainAvatar />
-          <View>
-            <SingleLineText title="Name" content="Anthony Vu" />
-            <SingleLineText title="Email" content="abvu@cpp.edu" />
-            <PrimaryBtn text="Edit" />
-          </View>
-        </AccountCardContainer>
-        <ListItem text="Account Info" onPress={this.handlePressAccountInfo} />
-        <Separator />
-        <ListItem
-          text="Notifications"
-          onPress={this.handlePressNotifications}
-        />
-        <Separator />
-        <ListItem text="Sync" onPress={this.handlePressSync} />
-        <Separator />
-        <ListItem text="About" onPress={this.handlePressAbout} />
-        <Separator />
+        <BackgroundContainer>
+          <StatusBar
+            backgroundColor={EStyleSheet.value("$primaryStatusBar")}
+            barStyle="dark-content"
+          />
+          <AccountCardContainer>
+            <Text>Account</Text>
+            <MainAvatar />
+            <View>
+              <SingleLineText title="Name" content="Anthony Vu" />
+              <SingleLineText title="Email" content="abvu@cpp.edu" />
+              <PrimaryBtn text="Edit" />
+            </View>
+          </AccountCardContainer>
+
+          <ListItem
+            text="Notifications"
+            onPress={this.handlePressNotifications}
+          />
+          <Separator />
+          <ListItem text="Sync" onPress={this.handlePressSync} />
+          <Separator />
+          <ListItem text="About" onPress={this.handlePressAbout} />
+          <Separator />
+        </BackgroundContainer>
       </ScrollView>
     );
   }
