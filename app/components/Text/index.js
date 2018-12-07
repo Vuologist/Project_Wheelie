@@ -1,3 +1,3 @@
-import SingleLineText from "./SingleLineText/styles";
+import SingleLineText from "./SingleLineText/SingleLineText";
 
 export { SingleLineText };
