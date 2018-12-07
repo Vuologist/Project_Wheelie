@@ -3,6 +3,6 @@ import EStyleSheet from "react-native-extended-stylesheet";
 export default EStyleSheet.create({
   wrapper: {
     flexDirection: "row",
-    margin: 20
+    margin: 3
   }
 });

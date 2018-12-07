@@ -5,6 +5,7 @@ import EStyleSheet from "react-native-extended-stylesheet";
 import { CenterContainer } from "../components/Container";
 import { MainAvatar } from "../components/Avatar";
 import { SingleLineText } from "../components/Text";
+import { PrimaryBtn } from "../components/Button";
 
 class AccountScreen extends Component {
   constructor(props) {
@@ -20,6 +21,8 @@ class AccountScreen extends Component {
         />
         <MainAvatar />
         <SingleLineText title="Name" content="Anthony Vu" />
+        <SingleLineText title="Email" content="abvu@cpp.edu" />
+        <PrimaryBtn text="Edit" />
       </CenterContainer>
     );
   }

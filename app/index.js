@@ -14,6 +14,7 @@ EStyleSheet.build({
   $primaryStatusBar: "#E6E6E6",
   $primaryBackground: "#F9F9F9",
   $primaryCard: "#75FF00",
+  $primaryBtn: "#007bff",
   $outline: 0
 });
 

@@ -2,16 +2,23 @@ import EStyleSheet from "react-native-extended-stylesheet";
 
 export default EStyleSheet.create({
   container: {
-    alignItems: "center"
+    alignItems: "center",
+    margin: 3
   },
   wrapper: {
     flexDirection: "row",
-    alignItems: "center"
+    alignItems: "center",
+    fontWeight: "400",
+    backgroundColor: "$primaryBtn",
+    borderColor: "$primaryBtn",
+    borderRadius: ".25rem",
+    borderWidth: 1,
+    paddingVertical: ".375rem",
+    paddingHorizontal: ".75rem"
   },
   text: {
-    color: white,
+    color: "#FFF",
     fontSize: 14,
-    paddingVertical: 20,
     fontWeight: "300"
   }
 });

@@ -6,7 +6,7 @@ import styles from "./styles";
 const PrimaryBtn = ({ text, onPress }) => (
   <TouchableOpacity style={styles.container} onPress={onPress}>
     <View style={styles.wrapper}>
-      <Text>{text}</Text>
+      <Text style={styles.text}>{text}</Text>
     </View>
   </TouchableOpacity>
 );

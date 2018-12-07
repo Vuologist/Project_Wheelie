@@ -1,4 +1,3 @@
-import HamburgerBttn from './HamburgerBttn';
-import styles from './styles';
+import PrimaryBtn from "./PrimaryBtn/PrimaryBtn";
 
-export { HamburgerBttn, styles};
+export { PrimaryBtn };
