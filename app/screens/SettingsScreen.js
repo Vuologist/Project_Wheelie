@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import { View, ScrollView, StatusBar } from "react-native";
 import EStyleSheet from "react-native-extended-stylesheet";
 
-import { ListItem, Separator } from "../components/List";
+import { Separator } from "../components/List";
 import { BackgroundContainer } from "../components/Container";
 import { MainAvatar } from "../components/Avatar";
 import { SingleLineText } from "../components/Text";

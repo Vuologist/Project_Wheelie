@@ -8,6 +8,7 @@ import {
 
 import HomeScreen from "./screens/HomeScreen";
 import SettingsScreen from "./screens/SettingsScreen";
+import MealsScreen from "./screens/MealsScreen";
 
 EStyleSheet.build({
   $primaryStatusBar: "#E6E6E6",
@@ -40,13 +41,28 @@ const SettingsNavigation = createStackNavigator(
   }
 );
 
+const MealsNavigation = createStackNavigator(
+  {
+    Meals: {
+      screen: MealsScreen,
+      navigationOptions: () => ({
+        title: "Meals"
+      })
+    }
+  },
+  {
+    initialRouteName: "Meals"
+  }
+);
+
 const DrawerNavigation = createDrawerNavigator(
   {
     Home: HomeNavigation,
-    Settings: SettingsNavigation
+    Settings: SettingsNavigation,
+    Meals: MealsNavigation
   },
   {
-    initialRouteName: "Settings"
+    initialRouteName: "Meals"
   }
 );
 
