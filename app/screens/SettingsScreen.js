@@ -9,7 +9,7 @@ import { MainAvatar } from "../components/Avatar";
 import { SingleLineText } from "../components/Text";
 import { PrimaryBtn } from "../components/Button";
 import { CustomSwitch } from "../components/Switch";
-import { AccountCard, GeneralCard, Title } from "../components/Card";
+import { AccountCard, GeneralCard, Title, Body } from "../components/Card";
 
 class SettingsScreen extends Component {
   constructor(props) {
@@ -67,6 +67,7 @@ class SettingsScreen extends Component {
           <Separator />
           <GeneralCard>
             <Title title="About" />
+            <Body header="Version" text="0.0.1" />
           </GeneralCard>
         </ScrollView>
       </BackgroundContainer>
