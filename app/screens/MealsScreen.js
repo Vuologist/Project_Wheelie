@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import { View, Text } from "react-native";
+import { View, Text, ScrollView } from "react-native";
+
+import { BackgroundContainer, MainContainer } from "../components/Container";
 
 class MealsScreen extends Component {
   constructor(props) {
@@ -8,9 +10,13 @@ class MealsScreen extends Component {
 
   render() {
     return (
-      <View>
-        <Text>Working</Text>
-      </View>
+      <BackgroundContainer>
+        <MainContainer>
+          <Text>mucho</Text>
+          <Text>mucho</Text>
+          <Text>mucho</Text>
+        </MainContainer>
+      </BackgroundContainer>
     );
   }
 }

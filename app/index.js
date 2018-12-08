@@ -44,14 +44,12 @@ const SettingsNavigation = createStackNavigator(
 const MealsNavigation = createStackNavigator(
   {
     Meals: {
-      screen: MealsScreen,
-      navigationOptions: () => ({
-        title: "Meals"
-      })
+      screen: MealsScreen
     }
   },
   {
-    initialRouteName: "Meals"
+    initialRouteName: "Meals",
+    headerMode: "none"
   }
 );
 

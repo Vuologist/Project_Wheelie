@@ -4,7 +4,7 @@ import EStyleSheet from "react-native-extended-stylesheet";
 
 import { HomeContainer } from "../components/Container";
 import { Header } from "../components/Header";
-import { WelcomeBanner } from "../components/WelcomeBanner";
+import { WelcomeBanner } from "../components/Banner";
 import { DailyMeals } from "../components/DailyMeals";
 
 const Name = "ANTHONY";
