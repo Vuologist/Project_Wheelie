@@ -3,7 +3,7 @@ import { StatusBar } from "react-native";
 import EStyleSheet from "react-native-extended-stylesheet";
 
 import { HomeContainer } from "../components/Container";
-import { Header } from "../components/Header";
+import { HamburgerBtn } from "../components/Button";
 import { WelcomeBanner } from "../components/Banner";
 import { DailyMeals } from "../components/DailyMeals";
 
@@ -22,7 +22,7 @@ class HomeScreen extends Component {
           backgroundColor={EStyleSheet.value("$primaryStatusBar")}
           barStyle="dark-content"
         />
-        <Header onPress={this.handleOptionPress} />
+        <HamburgerBtn onPress={this.handleOptionPress} />
         <WelcomeBanner name={Name} />
         <DailyMeals />
       </HomeContainer>

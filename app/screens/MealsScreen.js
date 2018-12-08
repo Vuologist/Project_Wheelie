@@ -3,6 +3,7 @@ import { View, Text, ScrollView } from "react-native";
 
 import { BackgroundContainer, MainContainer } from "../components/Container";
 import { MainBanner } from "../components/Banner";
+import { HamburgerBtn } from "../components/Button";
 
 class MealsScreen extends Component {
   constructor(props) {
@@ -13,6 +14,7 @@ class MealsScreen extends Component {
     return (
       <BackgroundContainer>
         <MainContainer>
+          <HamburgerBtn />
           <MainBanner title="Meals" />
           <View />
         </MainContainer>
