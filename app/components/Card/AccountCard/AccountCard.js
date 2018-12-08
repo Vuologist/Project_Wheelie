@@ -1,11 +1,11 @@
 import React from "react";
 import { View, Text } from "react-native";
 
-import { CenterContainer } from "../../index";
+import { CenterContainer } from "../../Container";
 
 import styles from "./styles";
 
-const AccountCardContainer = ({ children }) => (
+const AccountCard = ({ children }) => (
   <React.Fragment>
     <View>{children[0]}</View>
     <View style={styles.container}>
@@ -19,4 +19,4 @@ const AccountCardContainer = ({ children }) => (
   </React.Fragment>
 );
 
-export default AccountCardContainer;
+export default AccountCard;

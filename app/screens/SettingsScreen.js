@@ -1,18 +1,15 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { Text, View, ScrollView, StatusBar } from "react-native";
+import { View, ScrollView, StatusBar } from "react-native";
 import EStyleSheet from "react-native-extended-stylesheet";
 
 import { ListItem, Separator } from "../components/List";
-import {
-  AccountCardContainer,
-  BackgroundContainer,
-  GeneralCardContainer,
-  Title
-} from "../components/Container";
+import { BackgroundContainer } from "../components/Container";
 import { MainAvatar } from "../components/Avatar";
 import { SingleLineText } from "../components/Text";
 import { PrimaryBtn } from "../components/Button";
+import { CustomSwitch } from "../components/Switch";
+import { AccountCard, GeneralCard, Title } from "../components/Card";
 
 class SettingsScreen extends Component {
   constructor(props) {
@@ -41,30 +38,38 @@ class SettingsScreen extends Component {
 
   render() {
     return (
-      <ScrollView>
-        <BackgroundContainer>
+      <BackgroundContainer>
+        <ScrollView>
           <StatusBar
             backgroundColor={EStyleSheet.value("$primaryStatusBar")}
             barStyle="dark-content"
           />
-          <AccountCardContainer>
-            <Text>Account</Text>
+          <AccountCard>
+            <Title title="Account" />
             <MainAvatar />
             <View>
               <SingleLineText title="Name" content="Anthony Vu" />
               <SingleLineText title="Email" content="abvu@cpp.edu" />
               <PrimaryBtn text="Edit" />
             </View>
-          </AccountCardContainer>
-          <GeneralCardContainer>
+          </AccountCard>
+          <Separator />
+          <GeneralCard>
             <Title title="Notifications" />
-          </GeneralCardContainer>
-          <ListItem text="Sync" onPress={this.handlePressSync} />
+            <CustomSwitch title="Reminders" />
+          </GeneralCard>
           <Separator />
-          <ListItem text="About" onPress={this.handlePressAbout} />
+          <GeneralCard>
+            <Title title="Sync" />
+            <CustomSwitch title="Daily" />
+            <CustomSwitch title="Weekly" />
+          </GeneralCard>
           <Separator />
-        </BackgroundContainer>
-      </ScrollView>
+          <GeneralCard>
+            <Title title="About" />
+          </GeneralCard>
+        </ScrollView>
+      </BackgroundContainer>
     );
   }
 }
