@@ -17,8 +17,8 @@ class MealsScreen extends Component {
         <MainContainer>
           <HamburgerBtn />
           <MainBanner title="Meals" />
+          <Separator />
           <ScrollView>
-            <Separator />
             <ListItem dish="Chicken Alfredo" iconName="food-variant" />
             <Separator />
             <ListItem dish="Chicken Alfredo" iconName="food-variant" />

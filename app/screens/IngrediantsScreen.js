@@ -22,19 +22,6 @@ class IngrediantsScreen extends Component {
     };
   }
 
-  renderItems() {
-    const iconName = "food-apple";
-    let list = [];
-    for (let x = 0; x < this.state.food.length; x++) {
-      list.push(
-        <React.Fragment key={x}>
-          <ListItem dish={this.state.food[x]} iconName={iconName} />
-          <Separator />
-        </React.Fragment>
-      );
-    }
-  }
-
   render() {
     return (
       <BackgroundContainer>
@@ -43,11 +30,13 @@ class IngrediantsScreen extends Component {
           <MainBanner title="Ingrediants" />
           <Separator />
           <ScrollView>
-            <ListItem dish="Chicken Alfredo" iconName="food-variant" />
-            <Separator />
-            <ListItem dish="Chicken Alfredo" iconName="food-variant" />
-            <Separator />
-            <ListItem dish="Chicken Alfredo" iconName="food-variant" />
+            <Text>Hello world</Text>
+            <Text>Hello world</Text>
+            <Text>Hello world</Text>
+            <Text>Hello world</Text>
+            <Text>Hello world</Text>
+            <Text>Hello world</Text>
+            <Text>Hello world</Text>
           </ScrollView>
         </MainContainer>
       </BackgroundContainer>
