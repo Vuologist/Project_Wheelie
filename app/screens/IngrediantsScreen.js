@@ -3,7 +3,7 @@ import { ScrollView, Text } from "react-native";
 
 import { BackgroundContainer, MainContainer } from "../components/Container";
 import { MainBanner } from "../components/Banner";
-import { HamburgerBtn } from "../components/Button";
+import { HamburgerBtn, AddCircleBtn } from "../components/Button";
 import { Separator, ListItem } from "../components/List";
 
 class IngrediantsScreen extends Component {
@@ -47,6 +47,7 @@ class IngrediantsScreen extends Component {
           <MainBanner title="Ingrediants" />
           <Separator />
           <ScrollView>{this.renderItems()}</ScrollView>
+          <AddCircleBtn />
         </MainContainer>
       </BackgroundContainer>
     );

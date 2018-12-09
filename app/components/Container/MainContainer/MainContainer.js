@@ -9,6 +9,7 @@ const MainContainer = ({ children }) => (
     <View style={styles.banner}>{children[1]}</View>
     <View>{children[2]}</View>
     <View style={styles.content}>{children[3]}</View>
+    <View>{children[4]}</View>
   </View>
 );
 
