@@ -17,9 +17,26 @@ class IngrediantsScreen extends Component {
         "steak",
         "pork",
         "chicken",
-        "mushroom"
+        "mushroom",
+        "salt",
+        "pepper"
       ]
     };
+  }
+
+  renderItems() {
+    let list = [];
+    const iconName = "food-apple";
+
+    for (let i = 0; i < this.state.food.length; i++) {
+      list.push(
+        <React.Fragment key={i}>
+          <ListItem dish={this.state.food[i]} iconName={iconName} />
+          <Separator />
+        </React.Fragment>
+      );
+    }
+    return list;
   }
 
   render() {
@@ -29,15 +46,7 @@ class IngrediantsScreen extends Component {
           <HamburgerBtn />
           <MainBanner title="Ingrediants" />
           <Separator />
-          <ScrollView>
-            <Text>Hello world</Text>
-            <Text>Hello world</Text>
-            <Text>Hello world</Text>
-            <Text>Hello world</Text>
-            <Text>Hello world</Text>
-            <Text>Hello world</Text>
-            <Text>Hello world</Text>
-          </ScrollView>
+          <ScrollView>{this.renderItems()}</ScrollView>
         </MainContainer>
       </BackgroundContainer>
     );
