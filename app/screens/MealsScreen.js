@@ -9,6 +9,34 @@ import { Separator, ListItem } from "../components/List";
 class MealsScreen extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      food: [
+        "chicken alfredo",
+        "ravioli",
+        "meatloaf",
+        "honey baked chicken",
+        "taco salad",
+        "chicken fajitas",
+        "clam chowder",
+        "corn chowder",
+        "turkey sandwhich"
+      ]
+    };
+  }
+
+  renderItems() {
+    let list = [];
+    const iconName = "food-variant";
+
+    for (let i = 0; i < this.state.food.length; i++) {
+      list.push(
+        <React.Fragment key={i}>
+          <ListItem dish={this.state.food[i]} iconName={iconName} />
+          <Separator />
+        </React.Fragment>
+      );
+    }
+    return list;
   }
 
   render() {
@@ -18,22 +46,7 @@ class MealsScreen extends Component {
           <HamburgerBtn />
           <MainBanner title="Meals" />
           <Separator />
-          <ScrollView>
-            <ListItem dish="Chicken Alfredo" iconName="food-variant" />
-            <Separator />
-            <ListItem dish="Chicken Alfredo" iconName="food-variant" />
-            <Separator />
-            <ListItem dish="Chicken Alfredo" iconName="food-variant" />
-            <Separator />
-            <ListItem dish="Chicken Alfredo" iconName="food-variant" />
-            <Separator />
-            <ListItem dish="Chicken Alfredo" iconName="food-variant" />
-            <Separator />
-            <ListItem dish="Chicken Alfredo" iconName="food-variant" />
-            <Separator />
-            <ListItem dish="Chicken Alfredo" iconName="food-variant" />
-            <Separator />
-          </ScrollView>
+          <ScrollView>{this.renderItems()}</ScrollView>
         </MainContainer>
       </BackgroundContainer>
     );

@@ -10,7 +10,7 @@ class IngrediantsScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      food: [
+      ingrediants: [
         "rice",
         "celery",
         "red wine",
@@ -28,10 +28,10 @@ class IngrediantsScreen extends Component {
     let list = [];
     const iconName = "food-apple";
 
-    for (let i = 0; i < this.state.food.length; i++) {
+    for (let i = 0; i < this.state.ingrediants.length; i++) {
       list.push(
         <React.Fragment key={i}>
-          <ListItem dish={this.state.food[i]} iconName={iconName} />
+          <ListItem dish={this.state.ingrediants[i]} iconName={iconName} />
           <Separator />
         </React.Fragment>
       );
