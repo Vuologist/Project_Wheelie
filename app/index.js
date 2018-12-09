@@ -9,6 +9,7 @@ import {
 import HomeScreen from "./screens/HomeScreen";
 import SettingsScreen from "./screens/SettingsScreen";
 import MealsScreen from "./screens/MealsScreen";
+import IngrediantsScreen from "./screens/IngrediantsScreen";
 
 EStyleSheet.build({
   $primaryStatusBar: "#E6E6E6",
@@ -57,10 +58,11 @@ const DrawerNavigation = createDrawerNavigator(
   {
     Home: HomeNavigation,
     Settings: SettingsNavigation,
-    Meals: MealsNavigation
+    Meals: MealsNavigation,
+    Ingrediants: IngrediantsScreen
   },
   {
-    initialRouteName: "Meals"
+    initialRouteName: "Ingrediants"
   }
 );
 

@@ -4,9 +4,9 @@ import { ScrollView } from "react-native";
 import { BackgroundContainer, MainContainer } from "../components/Container";
 import { MainBanner } from "../components/Banner";
 import { HamburgerBtn } from "../components/Button";
-import { Separator, ListItem } from "../components/List";
+import { Separator, MealListItem } from "../components/List";
 
-class MealsScreen extends Component {
+class IngrediantsScreen extends Component {
   constructor(props) {
     super(props);
   }
@@ -16,28 +16,28 @@ class MealsScreen extends Component {
       <BackgroundContainer>
         <MainContainer>
           <HamburgerBtn />
-          <MainBanner title="Meals" />
+          <MainBanner title="Ingrediants" />
           <ScrollView>
             <Separator />
-            <ListItem dish="Chicken Alfredo" />
+            <MealListItem dish="Chicken Alfredo" />
             <Separator />
-            <ListItem dish="Chicken Alfredo" />
+            <MealListItem dish="Chicken Alfredo" />
             <Separator />
-            <ListItem dish="Chicken Alfredo" />
+            <MealListItem dish="Chicken Alfredo" />
             <Separator />
-            <ListItem dish="Chicken Alfredo" />
+            <MealListItem dish="Chicken Alfredo" />
             <Separator />
-            <ListItem dish="Chicken Alfredo" />
+            <MealListItem dish="Chicken Alfredo" />
             <Separator />
-            <ListItem dish="Chicken Alfredo" />
+            <MealListItem dish="Chicken Alfredo" />
             <Separator />
-            <ListItem dish="Chicken Alfredo" />
+            <MealListItem dish="Chicken Alfredo" />
             <Separator />
-            <ListItem dish="Chicken Alfredo" />
+            <MealListItem dish="Chicken Alfredo" />
             <Separator />
-            <ListItem dish="Chicken Alfredo" />
+            <MealListItem dish="Chicken Alfredo" />
             <Separator />
-            <ListItem dish="Chicken Alfredo" />
+            <MealListItem dish="Chicken Alfredo" />
             <Separator />
           </ScrollView>
         </MainContainer>
@@ -46,4 +46,4 @@ class MealsScreen extends Component {
   }
 }
 
-export default MealsScreen;
+export default IngrediantsScreen;

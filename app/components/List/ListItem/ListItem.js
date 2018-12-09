@@ -5,7 +5,7 @@ import MaterialIcon from "react-native-vector-icons/MaterialCommunityIcons";
 
 import styles from "./styles";
 
-const MealListItem = ({ onPress, dish }) => (
+const ListItem = ({ onPress, dish }) => (
   <View style={styles.container}>
     <TouchableOpacity onPress={onPress}>
       <EntypoIcon name="dots-three-vertical" size={20} style={styles.padding} />
@@ -18,4 +18,4 @@ const MealListItem = ({ onPress, dish }) => (
   </View>
 );
 
-export default MealListItem;
+export default ListItem;

@@ -1,4 +1,4 @@
 import Separator from "./Separator/Separator";
-import MealListItem from "./MealListItem/MealListItem";
+import ListItem from "./ListItem/ListItem";
 
-export { Separator, MealListItem };
+export { Separator, ListItem };
