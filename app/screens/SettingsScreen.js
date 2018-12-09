@@ -6,7 +6,7 @@ import { Separator } from "../components/List";
 import { BackgroundContainer } from "../components/Container";
 import { MainAvatar } from "../components/Avatar";
 import { SingleLineText } from "../components/Text";
-import { PrimaryBtn } from "../components/Button";
+import { PrimaryBtn, MenuBtn } from "../components/Button";
 import { CustomSwitch } from "../components/Switch";
 import { AccountCard, GeneralCard, Title, Body } from "../components/Card";
 
@@ -15,24 +15,11 @@ class SettingsScreen extends Component {
     super(props);
   }
 
-  static navigationOptions = {
-    hedaderTitle: "Settings"
-  };
-
-  handlePressAccountInfo = () => {
-    console.log("pressed account info");
-  };
-
-  handlePressNotifications = () => {
-    console.log("pressed notifications");
-  };
-
-  handlePressSync = () => {
-    console.log("pressed sync");
-  };
-
-  handlePressAbout = () => {
-    console.log("pressed about");
+  static navigationOptions = ({ navigation }) => {
+    return {
+      title: "Settings",
+      headerLeft: <MenuBtn navigation={navigation} />
+    };
   };
 
   render() {

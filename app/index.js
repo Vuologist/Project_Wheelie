@@ -31,10 +31,7 @@ const HomeNavigation = createStackNavigator(
 const SettingsNavigation = createStackNavigator(
   {
     Settings: {
-      screen: SettingsScreen,
-      navigationOptions: () => ({
-        title: "Settings"
-      })
+      screen: SettingsScreen
     }
   },
   {
@@ -57,12 +54,12 @@ const MealsNavigation = createStackNavigator(
 const DrawerNavigation = createDrawerNavigator(
   {
     Home: HomeNavigation,
-    Settings: SettingsNavigation,
+    Ingrediants: IngrediantsScreen,
     Meals: MealsNavigation,
-    Ingrediants: IngrediantsScreen
+    Settings: SettingsNavigation
   },
   {
-    initialRouteName: "Ingrediants"
+    initialRouteName: "Settings"
   }
 );
 

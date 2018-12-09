@@ -39,11 +39,16 @@ class IngrediantsScreen extends Component {
     return list;
   }
 
+  handleOptionPress = () => {
+    console.log("Header pressed!!");
+    this.props.navigation.openDrawer();
+  };
+
   render() {
     return (
       <BackgroundContainer>
         <MainContainer>
-          <HamburgerBtn />
+          <HamburgerBtn onPress={this.handleOptionPress} />
           <MainBanner title="Ingrediants" />
           <Separator />
           <ScrollView>{this.renderItems()}</ScrollView>
