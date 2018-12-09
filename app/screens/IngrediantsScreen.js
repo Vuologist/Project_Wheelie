@@ -1,14 +1,38 @@
 import React, { Component } from "react";
-import { ScrollView } from "react-native";
+import { ScrollView, Text } from "react-native";
 
 import { BackgroundContainer, MainContainer } from "../components/Container";
 import { MainBanner } from "../components/Banner";
 import { HamburgerBtn } from "../components/Button";
-import { Separator, MealListItem } from "../components/List";
+import { Separator, ListItem } from "../components/List";
 
 class IngrediantsScreen extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      food: [
+        "rice",
+        "celery",
+        "red wine",
+        "steak",
+        "pork",
+        "chicken",
+        "mushroom"
+      ]
+    };
+  }
+
+  renderItems() {
+    const iconName = "food-apple";
+    let list = [];
+    for (let x = 0; x < this.state.food.length; x++) {
+      list.push(
+        <React.Fragment key={x}>
+          <ListItem dish={this.state.food[x]} iconName={iconName} />
+          <Separator />
+        </React.Fragment>
+      );
+    }
   }
 
   render() {
@@ -17,28 +41,13 @@ class IngrediantsScreen extends Component {
         <MainContainer>
           <HamburgerBtn />
           <MainBanner title="Ingrediants" />
+          <Separator />
           <ScrollView>
+            <ListItem dish="Chicken Alfredo" iconName="food-variant" />
             <Separator />
-            <MealListItem dish="Chicken Alfredo" />
+            <ListItem dish="Chicken Alfredo" iconName="food-variant" />
             <Separator />
-            <MealListItem dish="Chicken Alfredo" />
-            <Separator />
-            <MealListItem dish="Chicken Alfredo" />
-            <Separator />
-            <MealListItem dish="Chicken Alfredo" />
-            <Separator />
-            <MealListItem dish="Chicken Alfredo" />
-            <Separator />
-            <MealListItem dish="Chicken Alfredo" />
-            <Separator />
-            <MealListItem dish="Chicken Alfredo" />
-            <Separator />
-            <MealListItem dish="Chicken Alfredo" />
-            <Separator />
-            <MealListItem dish="Chicken Alfredo" />
-            <Separator />
-            <MealListItem dish="Chicken Alfredo" />
-            <Separator />
+            <ListItem dish="Chicken Alfredo" iconName="food-variant" />
           </ScrollView>
         </MainContainer>
       </BackgroundContainer>

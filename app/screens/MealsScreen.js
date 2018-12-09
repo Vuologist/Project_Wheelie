@@ -19,25 +19,19 @@ class MealsScreen extends Component {
           <MainBanner title="Meals" />
           <ScrollView>
             <Separator />
-            <ListItem dish="Chicken Alfredo" />
+            <ListItem dish="Chicken Alfredo" iconName="food-variant" />
             <Separator />
-            <ListItem dish="Chicken Alfredo" />
+            <ListItem dish="Chicken Alfredo" iconName="food-variant" />
             <Separator />
-            <ListItem dish="Chicken Alfredo" />
+            <ListItem dish="Chicken Alfredo" iconName="food-variant" />
             <Separator />
-            <ListItem dish="Chicken Alfredo" />
+            <ListItem dish="Chicken Alfredo" iconName="food-variant" />
             <Separator />
-            <ListItem dish="Chicken Alfredo" />
+            <ListItem dish="Chicken Alfredo" iconName="food-variant" />
             <Separator />
-            <ListItem dish="Chicken Alfredo" />
+            <ListItem dish="Chicken Alfredo" iconName="food-variant" />
             <Separator />
-            <ListItem dish="Chicken Alfredo" />
-            <Separator />
-            <ListItem dish="Chicken Alfredo" />
-            <Separator />
-            <ListItem dish="Chicken Alfredo" />
-            <Separator />
-            <ListItem dish="Chicken Alfredo" />
+            <ListItem dish="Chicken Alfredo" iconName="food-variant" />
             <Separator />
           </ScrollView>
         </MainContainer>
