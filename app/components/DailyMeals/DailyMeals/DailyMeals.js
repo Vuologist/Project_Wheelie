@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, TouchableOpacity } from "react-native";
 
 import styles from "./styles";
 
@@ -23,7 +23,7 @@ class DailyMeals extends Component {
     for (let i = 0; i < dataForDay.length; i++) {
       element.push(
         <View style={styles.itemContainer} key={i}>
-          <View style={styles.itemBox}>
+          <TouchableOpacity style={styles.itemBox}>
             <Text>{dataForDay[i].meal}</Text>
             <View style={styles.content}>
               <Image
@@ -33,7 +33,7 @@ class DailyMeals extends Component {
               />
               <Text style={styles.name}>{dataForDay[i].name}</Text>
             </View>
-          </View>
+          </TouchableOpacity>
         </View>
       );
     }
