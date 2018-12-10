@@ -59,7 +59,7 @@ const DrawerNavigation = createDrawerNavigator(
     Settings: SettingsNavigation
   },
   {
-    initialRouteName: "Settings"
+    initialRouteName: "Home"
   }
 );
 

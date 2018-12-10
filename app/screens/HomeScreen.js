@@ -1,13 +1,14 @@
 import React, { Component } from "react";
-import { StatusBar } from "react-native";
+import { StatusBar, View } from "react-native";
 import EStyleSheet from "react-native-extended-stylesheet";
 
-import { HomeContainer } from "../components/Container";
+import { HomeContainer, FillContainer } from "../components/Container";
 import { HamburgerBtn } from "../components/Button";
 import { WelcomeBanner } from "../components/Banner";
-import { DailyMeals } from "../components/DailyMeals";
+import { DailyMealsCard } from "../components/Card";
 
 const Name = "ANTHONY";
+const data = require("../data/DailyMeals.json");
 
 class HomeScreen extends Component {
   handleOptionPress = () => {
@@ -24,7 +25,23 @@ class HomeScreen extends Component {
         />
         <HamburgerBtn onPress={this.handleOptionPress} />
         <WelcomeBanner name={Name} />
-        <DailyMeals />
+        <FillContainer>
+          <DailyMealsCard
+            header="breakfast"
+            image={require("../images/egg.png")}
+            dish={data.monday[0].name}
+          />
+          <DailyMealsCard
+            header="lunch"
+            image={require("../images/turkey-leg.png")}
+            dish={data.monday[1].name}
+          />
+          <DailyMealsCard
+            header="dinner"
+            image={require("../images/whole-turkey.png")}
+            dish={data.monday[2].name}
+          />
+        </FillContainer>
       </HomeContainer>
     );
   }

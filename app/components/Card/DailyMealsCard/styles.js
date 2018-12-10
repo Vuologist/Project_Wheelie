@@ -7,8 +7,7 @@ const styles = EStyleSheet.create({
   itemContainer: {
     flex: 1,
     paddingBottom: 10,
-    paddingRight: 10,
-    paddingLeft: 10
+    paddingHorizontal: 10
   },
   itemBox: {
     flex: 1,
