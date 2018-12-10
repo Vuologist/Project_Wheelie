@@ -65,7 +65,7 @@ const IngrediantsNavigation = createStackNavigator(
     }
   },
   {
-    initialRouteName: "Ingrediants",
+    initialRouteName: "Modal",
     headerMode: "none"
   }
 );
