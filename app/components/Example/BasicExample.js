@@ -1,7 +1,5 @@
 import React from "react";
-import { View, Text, TouchableOpacity } from "react-native";
-import EStyleSheet from "react-native-extended-stylesheet";
-import MaterialIcon from "react-native-vector-icons/MaterialIcons";
+import { Text, TouchableOpacity } from "react-native";
 import {
   Menu,
   MenuProvider,
@@ -9,15 +7,14 @@ import {
   MenuOption,
   MenuTrigger
 } from "react-native-popup-menu";
+import MaterialIcon from "react-native-vector-icons/MaterialIcons";
+import EStyleSheet from "react-native-extended-stylesheet";
 
-import styles from "./styles";
-
-const AddCircleBtn = ({ onPress }) => (
-  <View style={styles.container}>
-    <Menu>
-      <MenuTrigger
-        customStyle={{ TriggerTouchableComponent: TouchableOpacity }}
-      >
+const BasicExample = () => (
+  <MenuProvider style={{ flexDirection: "column", padding: 30 }}>
+    <Text>Hello world!</Text>
+    <Menu onSelect={value => alert(`Selected number: ${value}`)}>
+      <MenuTrigger TriggerTouchableComponent={TouchableOpacity}>
         <MaterialIcon
           name="add-circle"
           size={60}
@@ -32,7 +29,7 @@ const AddCircleBtn = ({ onPress }) => (
         <MenuOption value={3} disabled={true} text="Three" />
       </MenuOptions>
     </Menu>
-  </View>
+  </MenuProvider>
 );
 
-export default AddCircleBtn;
+export default BasicExample;

@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import { ScrollView, Text } from "react-native";
+import { MenuProvider } from "react-native-popup-menu";
 
 import { BackgroundContainer, MainContainer } from "../components/Container";
 import { MainBanner } from "../components/Banner";
 import { HamburgerBtn, AddCircleBtn } from "../components/Button";
 import { Separator, ListItem } from "../components/List";
+import BasicExample from "../components/Example/BasicExample";
 
 class IngrediantsScreen extends Component {
   constructor(props) {
@@ -46,15 +48,17 @@ class IngrediantsScreen extends Component {
 
   render() {
     return (
-      <BackgroundContainer>
-        <MainContainer>
-          <HamburgerBtn onPress={this.handleOptionPress} />
-          <MainBanner title="Ingrediants" />
-          <Separator />
-          <ScrollView>{this.renderItems()}</ScrollView>
-          <AddCircleBtn />
-        </MainContainer>
-      </BackgroundContainer>
+      <MenuProvider>
+        <BackgroundContainer>
+          <MainContainer>
+            <HamburgerBtn onPress={this.handleOptionPress} />
+            <MainBanner title="Ingrediants" />
+            <Separator />
+            <ScrollView>{this.renderItems()}</ScrollView>
+            <AddCircleBtn />
+          </MainContainer>
+        </BackgroundContainer>
+      </MenuProvider>
     );
   }
 }
