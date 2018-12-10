@@ -11,7 +11,7 @@ import {
 import { BackgroundContainer, ModalContainer } from "../components/Container";
 import { MainBanner } from "../components/Banner";
 
-class MealIngredInputScreen extends Component {
+class MealIngredientInputScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -114,4 +114,4 @@ class MealIngredInputScreen extends Component {
   }
 }
 
-export default MealIngredInputScreen;
+export default MealIngredientInputScreen;

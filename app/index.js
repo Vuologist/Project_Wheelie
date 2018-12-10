@@ -9,8 +9,8 @@ import {
 import HomeScreen from "./screens/HomeScreen";
 import SettingsScreen from "./screens/SettingsScreen";
 import MealsScreen from "./screens/MealsScreen";
-import IngrediantsScreen from "./screens/IngrediantsScreen";
-import MealIngrediantsInputScreen from "./screens/MealIngredInputScreen";
+import IngredientsScreen from "./screens/IngredientsScreen";
+import MealIngredientInputScreen from "./screens/MealIngredientInputScreen";
 
 EStyleSheet.build({
   $primaryStatusBar: "#E6E6E6",
@@ -46,7 +46,7 @@ const MealsNavigation = createStackNavigator(
       screen: MealsScreen
     },
     Modal: {
-      screen: MealIngrediantsInputScreen
+      screen: MealIngredientInputScreen
     }
   },
   {
@@ -55,17 +55,17 @@ const MealsNavigation = createStackNavigator(
   }
 );
 
-const IngrediantsNavigation = createStackNavigator(
+const IngredientsNavigation = createStackNavigator(
   {
-    Ingrediants: {
-      screen: IngrediantsScreen
+    Ingredients: {
+      screen: IngredientsScreen
     },
     Modal: {
-      screen: MealIngrediantsInputScreen
+      screen: MealIngredientInputScreen
     }
   },
   {
-    initialRouteName: "Modal",
+    initialRouteName: "Ingredients",
     headerMode: "none"
   }
 );
@@ -73,12 +73,12 @@ const IngrediantsNavigation = createStackNavigator(
 const DrawerNavigation = createDrawerNavigator(
   {
     Home: HomeNavigation,
-    Ingrediants: IngrediantsNavigation,
+    Ingredients: IngredientsNavigation,
     Meals: MealsNavigation,
     Settings: SettingsNavigation
   },
   {
-    initialRouteName: "Ingrediants"
+    initialRouteName: "Ingredients"
   }
 );
 

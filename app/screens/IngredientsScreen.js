@@ -1,14 +1,15 @@
 import React, { Component } from "react";
-import { ScrollView, Text } from "react-native";
+import { ScrollView, FlatList } from "react-native";
 import { MenuProvider } from "react-native-popup-menu";
 
 import { BackgroundContainer, MainContainer } from "../components/Container";
 import { MainBanner } from "../components/Banner";
 import { HamburgerBtn, AddCircleBtn } from "../components/Button";
-import { Separator, ListItem } from "../components/List";
-import BasicExample from "../components/Example/BasicExample";
+import { Separator, ListItem, FlatListItem } from "../components/List";
 
-class IngrediantsScreen extends Component {
+import IngredientData from "../data/IngredientsData";
+
+class IngredientsScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -52,12 +53,22 @@ class IngrediantsScreen extends Component {
         <BackgroundContainer>
           <MainContainer>
             <HamburgerBtn onPress={this.handleOptionPress} />
-            <MainBanner title="Ingrediants" />
+            <MainBanner title="Ingredients" />
             <Separator />
-            <ScrollView>{this.renderItems()}</ScrollView>
-            <AddCircleBtn
-              onPress={() => this.props.navigation.navigate("Modal")}
+            <FlatList
+              ref={"flatList"}
+              data={IngredientData}
+              renderItem={(item, index) => {
+                return (
+                  <FlatListItem
+                    item={item}
+                    index={index}
+                    parentFlatList={this}
+                  />
+                );
+              }}
             />
+            <AddCircleBtn ref={"addModal"} parentFlatList={this} />
           </MainContainer>
         </BackgroundContainer>
       </MenuProvider>
@@ -65,4 +76,4 @@ class IngrediantsScreen extends Component {
   }
 }
 
-export default IngrediantsScreen;
+export default IngredientsScreen;
