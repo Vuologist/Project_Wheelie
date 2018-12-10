@@ -12,20 +12,12 @@ import IngredientData from "../data/IngredientsData";
 class IngredientsScreen extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      ingrediants: [
-        "rice",
-        "celery",
-        "red wine",
-        "steak",
-        "pork",
-        "chicken",
-        "mushroom",
-        "salt",
-        "pepper"
-      ]
-    };
   }
+
+  handleOptionPress = () => {
+    console.log("Header pressed!!");
+    this.props.navigation.openDrawer();
+  };
 
   renderItems() {
     let list = [];
@@ -41,11 +33,6 @@ class IngredientsScreen extends Component {
     }
     return list;
   }
-
-  handleOptionPress = () => {
-    console.log("Header pressed!!");
-    this.props.navigation.openDrawer();
-  };
 
   render() {
     return (
