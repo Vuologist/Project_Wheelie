@@ -6,4 +6,10 @@ export default EStyleSheet.create({
     bottom: 25,
     right: 25
   }
+  // background: {
+  //   backgroundColor: "$primaryStatusBar",
+  //   borderRadius: 100,
+  //   borderColor: "$primaryBtn",
+  //   borderWidth: 1
+  // }
 });

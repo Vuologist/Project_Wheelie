@@ -55,7 +55,9 @@ class IngrediantsScreen extends Component {
             <MainBanner title="Ingrediants" />
             <Separator />
             <ScrollView>{this.renderItems()}</ScrollView>
-            <AddCircleBtn />
+            <AddCircleBtn
+              onPress={() => this.props.navigation.navigate("Modal")}
+            />
           </MainContainer>
         </BackgroundContainer>
       </MenuProvider>

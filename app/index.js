@@ -10,6 +10,7 @@ import HomeScreen from "./screens/HomeScreen";
 import SettingsScreen from "./screens/SettingsScreen";
 import MealsScreen from "./screens/MealsScreen";
 import IngrediantsScreen from "./screens/IngrediantsScreen";
+import MealIngrediantsInputScreen from "./screens/MealIngredInputScreen";
 
 EStyleSheet.build({
   $primaryStatusBar: "#E6E6E6",
@@ -43,6 +44,9 @@ const MealsNavigation = createStackNavigator(
   {
     Meals: {
       screen: MealsScreen
+    },
+    Modal: {
+      screen: MealIngrediantsInputScreen
     }
   },
   {
@@ -51,10 +55,25 @@ const MealsNavigation = createStackNavigator(
   }
 );
 
+const IngrediantsNavigation = createStackNavigator(
+  {
+    Ingrediants: {
+      screen: IngrediantsScreen
+    },
+    Modal: {
+      screen: MealIngrediantsInputScreen
+    }
+  },
+  {
+    initialRouteName: "Ingrediants",
+    headerMode: "none"
+  }
+);
+
 const DrawerNavigation = createDrawerNavigator(
   {
     Home: HomeNavigation,
-    Ingrediants: IngrediantsScreen,
+    Ingrediants: IngrediantsNavigation,
     Meals: MealsNavigation,
     Settings: SettingsNavigation
   },

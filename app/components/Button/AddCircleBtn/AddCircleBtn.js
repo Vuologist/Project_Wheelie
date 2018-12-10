@@ -14,7 +14,7 @@ import styles from "./styles";
 
 const AddCircleBtn = ({ onPress }) => (
   <View style={styles.container}>
-    <TouchableOpacity onPress={onPress}>
+    <TouchableOpacity onPress={onPress} style={styles.background}>
       <MaterialIcon
         name="add-circle"
         size={60}
