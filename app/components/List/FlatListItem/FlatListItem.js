@@ -1,67 +1,47 @@
-import React, { Component } from "react";
-import {
-  AppRegistry,
-  FlatList,
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  Alert,
-  Platform,
-  TouchableHighlight
-} from "react-native";
+import React from "react";
+import { View, Text, TouchableOpacity } from "react-native";
+import EntypoIcon from "react-native-vector-icons/Entypo";
+import MaterialIcon from "react-native-vector-icons/MaterialCommunityIcons";
 
-const styles = StyleSheet.create({
-  flatListItem: {
-    color: "white",
-    padding: 10,
-    fontSize: 16
-  }
-});
+import styles from "./styles";
 
-class FlatListItem extends Component {
+// const FlatListItem = ({ flag, onPress, item, iconName, id }) => (
+//   <View style={styles.container} key={id}>
+//     <TouchableOpacity onPress={onPress}>
+//       <EntypoIcon name="dots-three-vertical" size={20} style={styles.padding} />
+//     </TouchableOpacity>
+//     <View style={styles.iconCircle}>
+//       <MaterialIcon name={iconName} size={20} />
+//     </View>
+//     <Text style={styles.text}>
+//       {flag === "ingredient" ? item.ingredient : item.meal}
+//     </Text>
+//   </View>
+// );
+
+class FlatListItem extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      activeRowKey: null
-    };
   }
 
   render() {
     return (
-      <View
-        style={{
-          flex: 1,
-          flexDirection: "column"
-        }}
-      >
-        <View
-          style={{
-            flex: 1,
-            flexDirection: "row",
-            // backgroundColor: this.props.index % 2 == 0 ? 'mediumseagreen': 'tomato'
-            backgroundColor: "mediumseagreen"
-          }}
-        >
-          <View
-            style={{
-              flex: 1,
-              flexDirection: "column",
-              height: 100
-            }}
-          >
-            <Text style={styles.flatListItem}>{this.props.item.name}</Text>
-            <Text style={styles.flatListItem}>
-              {this.props.item.foodDescription}
-            </Text>
-          </View>
+      <View style={styles.container} key={this.props.id}>
+        <TouchableOpacity onPress={this.props.onPress}>
+          <EntypoIcon
+            name="dots-three-vertical"
+            size={20}
+            style={styles.padding}
+          />
+        </TouchableOpacity>
+        <View style={styles.iconCircle}>
+          <MaterialIcon name={this.props.iconName} size={20} />
         </View>
-        <View
-          style={{
-            height: 1,
-            backgroundColor: "white"
-          }}
-        />
+        <Text style={styles.text}>
+          {this.props.flag === "ingredient"
+            ? this.props.item.ingredient
+            : this.props.item.meal}
+        </Text>
       </View>
     );
   }

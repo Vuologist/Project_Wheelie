@@ -7,15 +7,40 @@ import { MainBanner } from "../components/Banner";
 import { HamburgerBtn, AddCircleBtn } from "../components/Button";
 import { Separator, ListItem, FlatListItem } from "../components/List";
 
-import IngredientData from "../data/IngredientsData";
-
 class IngredientsScreen extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      IngredientsData: [
+        {
+          ingredient: "celery"
+        },
+        {
+          ingredient: "salt"
+        },
+        {
+          ingredient: "pepper"
+        },
+        {
+          ingredient: "chicken"
+        },
+        {
+          ingredient: "beef"
+        },
+        {
+          ingredient: "pasta"
+        },
+        {
+          ingredient: "cumin"
+        }
+      ]
+    };
   }
 
+  _keyExtractor = (item, index) => item.id;
+
   handleOptionPress = () => {
-    console.log("Header pressed!!");
+    //console.log(IngredientDataIngred);
     this.props.navigation.openDrawer();
   };
 
@@ -44,18 +69,22 @@ class IngredientsScreen extends Component {
             <Separator />
             <FlatList
               ref={"flatList"}
-              data={IngredientData}
-              renderItem={(item, index) => {
+              data={this.state.IngredientsData}
+              renderItem={({ item, index }) => {
                 return (
                   <FlatListItem
+                    id={item.id}
+                    flag="ingredient"
                     item={item}
                     index={index}
-                    parentFlatList={this}
+                    iconName="food-apple"
                   />
                 );
               }}
+              ItemSeparatorComponent={Separator}
+              keyExtractor={this._keyExtractor}
             />
-            <AddCircleBtn ref={"addModal"} parentFlatList={this} />
+            {/* <AddCircleBtn ref={"addModal"} /> */}
           </MainContainer>
         </BackgroundContainer>
       </MenuProvider>
