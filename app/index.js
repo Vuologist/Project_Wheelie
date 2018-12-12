@@ -14,8 +14,10 @@ import IngredientsScreen from "./screens/IngredientsGroup/IngredientsScreen";
 import IngredientsInputScreen from "./screens/IngredientsGroup/IngredientsInputScreen";
 import IngredientsScreen2 from "./screens/IngredientsGroup/IngredientsScreen2";
 
+import MealsScreen from "./screens/MealsGroup/MealsScreen";
+import MealsInputScreen from "./screens/MealsGroup/MealsInputScreen";
+
 import SettingsScreen from "./screens/SettingsScreen";
-import MealsScreen from "./screens/MealsScreen";
 
 import MealIngredientInputScreen from "./screens/MealIngredientInputScreen";
 
@@ -54,8 +56,8 @@ const MealsNavigation = createStackNavigator(
     Meals: {
       screen: MealsScreen
     },
-    Modal: {
-      screen: MealIngredientInputScreen
+    MealsInput: {
+      screen: MealsInputScreen
     }
   },
   {
@@ -90,7 +92,7 @@ const DrawerNavigation = createDrawerNavigator(
     Settings: SettingsNavigation
   },
   {
-    initialRouteName: "Ingredients"
+    initialRouteName: "Meals"
   }
 );
 
