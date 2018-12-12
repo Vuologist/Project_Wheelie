@@ -16,6 +16,7 @@ import IngredientsScreen2 from "./screens/IngredientsGroup/IngredientsScreen2";
 
 import MealsScreen from "./screens/MealsGroup/MealsScreen";
 import MealsInputScreen from "./screens/MealsGroup/MealsInputScreen";
+import MealsScreen2 from "./screens/MealsGroup/MealsScreen2";
 
 import SettingsScreen from "./screens/SettingsScreen";
 
@@ -58,6 +59,9 @@ const MealsNavigation = createStackNavigator(
     },
     MealsInput: {
       screen: MealsInputScreen
+    },
+    Meals2: {
+      screen: MealsScreen2
     }
   },
   {

@@ -43,9 +43,7 @@ class MealsInputScreen extends Component {
                 height: 40,
                 borderRadius: 6
               }}
-              onPress={() => {
-                this.props.navigation.navigate("Ingredients2");
-              }}
+              onPress={() => this.props.navigation.navigate("Meals2")}
               title="Save"
             />
           </View>

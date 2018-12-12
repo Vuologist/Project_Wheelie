@@ -6,11 +6,12 @@ import { MainBanner } from "../../components/Banner";
 import { HamburgerBtn, AddCircleBtn } from "../../components/Button";
 import { Separator, ListItem } from "../../components/List";
 
-class MealsScreen extends Component {
+class MealsScreen2 extends Component {
   constructor(props) {
     super(props);
     this.state = {
       food: [
+        "Chicken Soup",
         "Chicken Alfredo",
         "Ravioli",
         "Meatloaf",
@@ -61,4 +62,4 @@ class MealsScreen extends Component {
   }
 }
 
-export default MealsScreen;
+export default MealsScreen2;
