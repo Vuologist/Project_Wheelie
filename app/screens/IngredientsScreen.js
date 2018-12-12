@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import { ScrollView, FlatList } from "react-native";
+import { FlatList } from "react-native";
 import { MenuProvider } from "react-native-popup-menu";
 
 import { BackgroundContainer, MainContainer } from "../components/Container";
 import { MainBanner } from "../components/Banner";
 import { HamburgerBtn, AddCircleBtn } from "../components/Button";
-import { Separator, ListItem, FlatListItem } from "../components/List";
-import { _Modal } from "../components/Modal";
+import { Separator, FlatListItem } from "../components/List";
+import { AddModal } from "../components/Modal";
 
 class IngredientsScreen extends Component {
   constructor(props) {
@@ -34,36 +34,21 @@ class IngredientsScreen extends Component {
         {
           ingredient: "cumin"
         }
-      ]
+      ],
+      modalVisible: false
     };
   }
-
-  _keyExtractor = (item, index) => item.id;
 
   handleOptionPress = () => {
     //console.log(IngredientDataIngred);
     this.props.navigation.openDrawer();
   };
 
-  _onPressAdd() {
-    // alert("You add Item");
-    this.refs.addModal.showAddModal();
-  }
-
-  renderItems() {
-    let list = [];
-    const iconName = "food-apple";
-
-    for (let i = 0; i < this.state.ingrediants.length; i++) {
-      list.push(
-        <React.Fragment key={i}>
-          <ListItem dish={this.state.ingrediants[i]} iconName={iconName} />
-          <Separator />
-        </React.Fragment>
-      );
-    }
-    return list;
-  }
+  viewModal = () => {
+    this.setState({
+      modalVisible: true
+    });
+  };
 
   render() {
     return (
@@ -74,24 +59,21 @@ class IngredientsScreen extends Component {
             <MainBanner title="Ingredients" />
             <Separator />
             <FlatList
-              ref={"flatList"}
               data={this.state.IngredientsData}
               renderItem={({ item, index }) => {
                 return (
                   <FlatListItem
-                    id={item.id}
+                    id={index}
                     flag="ingredient"
                     item={item}
-                    index={index}
                     iconName="food-apple"
                   />
                 );
               }}
               ItemSeparatorComponent={Separator}
-              keyExtractor={this._keyExtractor}
             />
-            <AddCircleBtn onPress={this._onPressAdd} />
-            <_Modal ref={"addModal"} />
+            <AddCircleBtn onPress={this.viewModal} />
+            <AddModal visible={false} />
           </MainContainer>
         </BackgroundContainer>
       </MenuProvider>

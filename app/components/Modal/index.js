@@ -1,3 +1,3 @@
-import _Modal from "./_Modal";
+import AddModal from "./AddModal";
 
-export { _Modal };
+export { AddModal };

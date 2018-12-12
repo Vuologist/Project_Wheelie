@@ -2,15 +2,15 @@
   "monday": [
     {
       "meal": "breakfast",
-      "name": "bacon"
+      "name": "Scrambled Eggs"
     },
     {
       "meal": "lunch",
-      "name": "chicken"
+      "name": "Ham and Bacon Sandwhich"
     },
     {
       "meal": "dinner",
-      "name": "porkchops"
+      "name": "Steak and Mash Potatos"
     }
   ],
   "tuesday": [

@@ -6,7 +6,10 @@ import {
   createAppContainer
 } from "react-navigation";
 
-import HomeScreen from "./screens/HomeScreen";
+import HomeScreen from "./screens/Group1/HomeScreen";
+import HomeMealsScreen from "./screens/Group1/HomeMealsScreen";
+import HomeScreen2 from "./screens/Group1/HomeScreen2";
+
 import SettingsScreen from "./screens/SettingsScreen";
 import MealsScreen from "./screens/MealsScreen";
 import IngredientsScreen from "./screens/IngredientsScreen";
@@ -22,7 +25,9 @@ EStyleSheet.build({
 
 const HomeNavigation = createStackNavigator(
   {
-    Home: HomeScreen
+    Home: HomeScreen,
+    Meals: HomeMealsScreen,
+    HomeScreen2: HomeScreen2
   },
   {
     headerMode: "none"
@@ -78,7 +83,7 @@ const DrawerNavigation = createDrawerNavigator(
     Settings: SettingsNavigation
   },
   {
-    initialRouteName: "Ingredients"
+    initialRouteName: "Home"
   }
 );
 
