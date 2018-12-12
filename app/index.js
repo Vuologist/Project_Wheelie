@@ -83,7 +83,7 @@ const IngredientsNavigation = createStackNavigator(
     }
   },
   {
-    initialRouteName: "IngredientsInput",
+    initialRouteName: "Ingredients",
     headerMode: "none"
   }
 );
@@ -96,7 +96,7 @@ const DrawerNavigation = createDrawerNavigator(
     Settings: SettingsNavigation
   },
   {
-    initialRouteName: "Meals"
+    initialRouteName: "Settings"
   }
 );
 

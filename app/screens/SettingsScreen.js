@@ -13,6 +13,11 @@ import { AccountCard, GeneralCard, Title, Body } from "../components/Card";
 class SettingsScreen extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      reminders: false,
+      daily: false,
+      weekly: true
+    };
   }
 
   static navigationOptions = ({ navigation }) => {
@@ -36,19 +41,22 @@ class SettingsScreen extends Component {
             <View>
               <SingleLineText title="Name" content="Anthony Vu" />
               <SingleLineText title="Email" content="abvu@cpp.edu" />
-              <PrimaryBtn text="Edit" />
+              <PrimaryBtn text="Change" />
             </View>
           </AccountCard>
           <Separator />
           <GeneralCard>
             <Title title="Notifications" />
-            <CustomSwitch title="Reminders" />
+            <CustomSwitch
+              title="Reminders"
+              switchValue={this.state.reminders}
+            />
           </GeneralCard>
           <Separator />
           <GeneralCard>
             <Title title="Sync" />
-            <CustomSwitch title="Daily" />
-            <CustomSwitch title="Weekly" />
+            <CustomSwitch title="Daily" switchValue={this.state.daily} />
+            <CustomSwitch title="Weekly" switchValue={this.state.weekly} />
           </GeneralCard>
           <Separator />
           <GeneralCard>
