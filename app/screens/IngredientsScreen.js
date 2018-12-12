@@ -6,6 +6,7 @@ import { BackgroundContainer, MainContainer } from "../components/Container";
 import { MainBanner } from "../components/Banner";
 import { HamburgerBtn, AddCircleBtn } from "../components/Button";
 import { Separator, ListItem, FlatListItem } from "../components/List";
+import { _Modal } from "../components/Modal";
 
 class IngredientsScreen extends Component {
   constructor(props) {
@@ -43,6 +44,11 @@ class IngredientsScreen extends Component {
     //console.log(IngredientDataIngred);
     this.props.navigation.openDrawer();
   };
+
+  _onPressAdd() {
+    // alert("You add Item");
+    this.refs.addModal.showAddModal();
+  }
 
   renderItems() {
     let list = [];
@@ -84,7 +90,8 @@ class IngredientsScreen extends Component {
               ItemSeparatorComponent={Separator}
               keyExtractor={this._keyExtractor}
             />
-            {/* <AddCircleBtn ref={"addModal"} /> */}
+            <AddCircleBtn onPress={this._onPressAdd} />
+            <_Modal ref={"addModal"} />
           </MainContainer>
         </BackgroundContainer>
       </MenuProvider>
