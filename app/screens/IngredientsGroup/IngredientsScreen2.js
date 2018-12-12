@@ -2,37 +2,39 @@ import React, { Component } from "react";
 import { FlatList } from "react-native";
 import { MenuProvider } from "react-native-popup-menu";
 
-import { BackgroundContainer, MainContainer } from "../components/Container";
-import { MainBanner } from "../components/Banner";
-import { HamburgerBtn, AddCircleBtn } from "../components/Button";
-import { Separator, FlatListItem } from "../components/List";
-import { AddModal } from "../components/Modal";
+import { BackgroundContainer, MainContainer } from "../../components/Container";
+import { MainBanner } from "../../components/Banner";
+import { HamburgerBtn, AddCircleBtn } from "../../components/Button";
+import { Separator, FlatListItem } from "../../components/List";
 
-class IngredientsScreen extends Component {
+class IngredientsScreen2 extends Component {
   constructor(props) {
     super(props);
     this.state = {
       IngredientsData: [
         {
-          ingredient: "celery"
+          ingredient: "Caramel"
         },
         {
-          ingredient: "salt"
+          ingredient: "Celery"
         },
         {
-          ingredient: "pepper"
+          ingredient: "Salt"
         },
         {
-          ingredient: "chicken"
+          ingredient: "Pepper"
         },
         {
-          ingredient: "beef"
+          ingredient: "Chicken"
         },
         {
-          ingredient: "pasta"
+          ingredient: "Beef"
         },
         {
-          ingredient: "cumin"
+          ingredient: "Pasta"
+        },
+        {
+          ingredient: "Cumin"
         }
       ],
       modalVisible: false
@@ -72,8 +74,9 @@ class IngredientsScreen extends Component {
               }}
               ItemSeparatorComponent={Separator}
             />
-            <AddCircleBtn onPress={this.viewModal} />
-            <AddModal visible={false} />
+            <AddCircleBtn
+              onPress={() => this.props.navigation.navigate("IngredientsInput")}
+            />
           </MainContainer>
         </BackgroundContainer>
       </MenuProvider>
@@ -81,4 +84,4 @@ class IngredientsScreen extends Component {
   }
 }
 
-export default IngredientsScreen;
+export default IngredientsScreen2;

@@ -10,9 +10,13 @@ import HomeScreen from "./screens/Group1/HomeScreen";
 import HomeMealsScreen from "./screens/Group1/HomeMealsScreen";
 import HomeScreen2 from "./screens/Group1/HomeScreen2";
 
+import IngredientsScreen from "./screens/IngredientsGroup/IngredientsScreen";
+import IngredientsInputScreen from "./screens/IngredientsGroup/IngredientsInputScreen";
+import IngredientsScreen2 from "./screens/IngredientsGroup/IngredientsScreen2";
+
 import SettingsScreen from "./screens/SettingsScreen";
 import MealsScreen from "./screens/MealsScreen";
-import IngredientsScreen from "./screens/IngredientsScreen";
+
 import MealIngredientInputScreen from "./screens/MealIngredientInputScreen";
 
 EStyleSheet.build({
@@ -65,12 +69,15 @@ const IngredientsNavigation = createStackNavigator(
     Ingredients: {
       screen: IngredientsScreen
     },
-    Modal: {
-      screen: MealIngredientInputScreen
+    IngredientsInput: {
+      screen: IngredientsInputScreen
+    },
+    Ingredients2: {
+      screen: IngredientsScreen2
     }
   },
   {
-    initialRouteName: "Ingredients",
+    initialRouteName: "IngredientsInput",
     headerMode: "none"
   }
 );
@@ -83,7 +90,7 @@ const DrawerNavigation = createDrawerNavigator(
     Settings: SettingsNavigation
   },
   {
-    initialRouteName: "Home"
+    initialRouteName: "Ingredients"
   }
 );
 
