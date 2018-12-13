@@ -9,6 +9,8 @@ import {
 import HomeScreen from "./screens/Group1/HomeScreen";
 import HomeMealsScreen from "./screens/Group1/HomeMealsScreen";
 import HomeScreen2 from "./screens/Group1/HomeScreen2";
+import HomeMealsScreen2 from "./screens/Group1/HomeMealsScreen2";
+import HomeScreen3 from "./screens/Group1/HomeScreen3";
 
 import IngredientsScreen from "./screens/IngredientsGroup/IngredientsScreen";
 import IngredientsInputScreen from "./screens/IngredientsGroup/IngredientsInputScreen";
@@ -34,7 +36,9 @@ const HomeNavigation = createStackNavigator(
   {
     Home: HomeScreen,
     Meals: HomeMealsScreen,
-    HomeScreen2: HomeScreen2
+    HomeScreen2: HomeScreen2,
+    Meals2: HomeMealsScreen2,
+    HomeScreen3: HomeScreen3
   },
   {
     headerMode: "none"
@@ -96,7 +100,7 @@ const DrawerNavigation = createDrawerNavigator(
     Settings: SettingsNavigation
   },
   {
-    initialRouteName: "Settings"
+    initialRouteName: "Home"
   }
 );
 

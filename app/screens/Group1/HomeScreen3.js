@@ -10,7 +10,7 @@ import { DailyMealsCard } from "../../components/Card";
 const Name = "ANTHONY";
 const data = require("../../data/DailyMeals.json");
 
-class HomeScreen2 extends Component {
+class HomeScreen3 extends Component {
   handleOptionPress = () => {
     console.log("Header pressed!!");
     this.props.navigation.openDrawer();
@@ -29,7 +29,7 @@ class HomeScreen2 extends Component {
           <DailyMealsCard
             header="breakfast"
             image={require("../../images/egg.png")}
-            dish="Chicken Alfredo"
+            dish="Scrambled Eggs"
           />
           <DailyMealsCard
             header="lunch"
@@ -39,8 +39,7 @@ class HomeScreen2 extends Component {
           <DailyMealsCard
             header="dinner"
             image={require("../../images/whole-turkey.png")}
-            dish={data.monday[2].name}
-            onPress={() => this.props.navigation.navigate("Meals2")}
+            dish="Chicken Soup"
           />
         </FillContainer>
       </HomeContainer>
@@ -48,4 +47,4 @@ class HomeScreen2 extends Component {
   }
 }
 
-export default HomeScreen2;
+export default HomeScreen3;
