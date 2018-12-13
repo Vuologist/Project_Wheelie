@@ -27,6 +27,26 @@ class SettingsScreen extends Component {
     };
   };
 
+  toggleReminder = () => {
+    this.setState({
+      reminders: !this.state.reminders
+    });
+  };
+
+  toggleDaily = () => {
+    this.setState({
+      daily: !this.state.daily,
+      weekly: !this.state.weekly
+    });
+  };
+
+  toggleWeekly = () => {
+    this.setState({
+      daily: !this.state.daily,
+      weekly: !this.state.weekly
+    });
+  };
+
   render() {
     return (
       <BackgroundContainer>
@@ -41,7 +61,7 @@ class SettingsScreen extends Component {
             <View>
               <SingleLineText title="Name" content="Anthony Vu" />
               <SingleLineText title="Email" content="abvu@cpp.edu" />
-              <PrimaryBtn text="Change" />
+              <PrimaryBtn text="Manage Account" />
             </View>
           </AccountCard>
           <Separator />
@@ -50,13 +70,22 @@ class SettingsScreen extends Component {
             <CustomSwitch
               title="Reminders"
               switchValue={this.state.reminders}
+              onValueChange={this.toggleReminder}
             />
           </GeneralCard>
           <Separator />
           <GeneralCard>
             <Title title="Sync" />
-            <CustomSwitch title="Daily" switchValue={this.state.daily} />
-            <CustomSwitch title="Weekly" switchValue={this.state.weekly} />
+            <CustomSwitch
+              title="Daily"
+              onValueChange={this.toggleDaily}
+              switchValue={this.state.daily}
+            />
+            <CustomSwitch
+              title="Weekly"
+              onValueChange={this.toggleWeekly}
+              switchValue={this.state.weekly}
+            />
           </GeneralCard>
           <Separator />
           <GeneralCard>

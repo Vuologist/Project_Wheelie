@@ -6,7 +6,7 @@ import styles from "./styles";
 const CustomSwitch = props => (
   <View style={styles.container}>
     <Text style={styles.text}>{props.title}</Text>
-    <Switch onValueChange={props.toggleSwitch} value={props.switchValue} />
+    <Switch onValueChange={props.onValueChange} value={props.switchValue} />
   </View>
 );
 
